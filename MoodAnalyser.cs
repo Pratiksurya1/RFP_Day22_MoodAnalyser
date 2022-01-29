@@ -26,16 +26,16 @@ namespace Day22_MoodAnalyser
                 else
                     return "happy";
 
-                if (new MoodAnalyserFactory().Equals(message.ToLower()))
+                if (new MoodAnalyserFactory(message).Equals(message.ToLower()))
                     return "equals";
                 else
                 {
                     return "not equals";
                 }
             }
-            catch (NullReferenceException)
+            catch (MoodAnalysisException)
             {
-                return "happy";
+                throw  new MoodAnalysisException(MoodAnalysisException.AnalysisErrors.NoSuchClassException, "No Such Class Exception");
             }
             return message;
         }

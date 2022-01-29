@@ -27,13 +27,11 @@ namespace Day22_MoodAnalyser
 
                     throw new MoodAnalysisException(MoodAnalysisException.AnalysisErrors.NoSuchClassException, "Found No Such Class Exception");
             }
-            catch(Exception)
+            catch(MoodAnalysisException)
             {
-                throw new MoodAnalysisException(MoodAnalysisException.AnalysisErrors.NullMoodExeption, "Found Empty Mood Exception");
+                throw new MoodAnalysisException(MoodAnalysisException.AnalysisErrors.NoSuchClassException, "Found No Such Class Exception");
+               // throw new MoodAnalysisException(MoodAnalysisException.AnalysisErrors.NullMoodExeption, "Found Empty Mood Exception");
             }
-
-
-
         }
     }
 }

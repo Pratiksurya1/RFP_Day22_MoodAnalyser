@@ -11,7 +11,8 @@ namespace Day22_MoodAnalyser
         public enum AnalysisErrors
         {
             NullMoodExeption,
-            NoSuchClassException
+            NoSuchClassException,
+           
         }
 
         AnalysisErrors type;
