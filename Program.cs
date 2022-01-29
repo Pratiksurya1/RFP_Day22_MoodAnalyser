@@ -13,7 +13,7 @@ namespace Day22_MoodAnalyser
             MoodAnalyser moodAnalyser = new MoodAnalyser();
             Console.WriteLine("how is your mood today !");
             String message=Console.ReadLine();
-            string actual = moodAnalyser.AnalyzedMood(message);
+            string actual = moodAnalyser.AnalyzedMood(message); 
             Console.WriteLine(actual);
         }
     }
