@@ -12,12 +12,19 @@ namespace Day22_MoodAnalyser
         public static void Main(String[] args)
         {
             String message;
-            MoodAnalyser moodAnalyser = new MoodAnalyser();
-            Console.WriteLine("how is your mood today !");
-            message=Console.ReadLine();
-            string actual = moodAnalyser.AnalyzedMood(message); 
-            Console.WriteLine(actual);
-
+            String actual;
+            try
+            {
+                Console.WriteLine("how is your mood today !");
+                message = Console.ReadLine();
+                MoodAnalyser moodAnalyser = new MoodAnalyser(message);
+                actual = moodAnalyser.AnalyzedMood();
+                Console.WriteLine(actual);
+            }
+            catch(Exception)
+            {
+                throw new MoodAnalysisException(MoodAnalysisException.AnalysisErrors.NullMoodExeption, "Found Empty Mood Exception");
+            }
 
 
         }
