@@ -9,6 +9,10 @@ namespace Day22_MoodAnalyser
     internal class MoodAnalyser
     {
         public String message;
+        public MoodAnalyser()
+        {
+            message = null;
+        }
         public MoodAnalyser(String message)
         {
             this.message = message;
@@ -21,6 +25,13 @@ namespace Day22_MoodAnalyser
                     return "sad";
                 else
                     return "happy";
+
+                if (new MoodAnalyserFactory().Equals(message.ToLower()))
+                    return "equals";
+                else
+                {
+                    return "not equals";
+                }
             }
             catch (NullReferenceException)
             {

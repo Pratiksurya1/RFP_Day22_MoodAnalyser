@@ -11,7 +11,7 @@ namespace Day22_MoodAnalyser
         
         public static void Main(String[] args)
         {
-            String message;
+            String message = null ;
             String actual;
             try
             {
@@ -20,11 +20,18 @@ namespace Day22_MoodAnalyser
                 MoodAnalyser moodAnalyser = new MoodAnalyser(message);
                 actual = moodAnalyser.AnalyzedMood();
                 Console.WriteLine(actual);
+
+                if (new MoodAnalyserFactory().Equals(moodAnalyser))
+                    Console.WriteLine("Test passes if they are equal");
+                else
+
+                    throw new MoodAnalysisException(MoodAnalysisException.AnalysisErrors.NoSuchClassException, "Found No Such Class Exception");
             }
             catch(Exception)
             {
                 throw new MoodAnalysisException(MoodAnalysisException.AnalysisErrors.NullMoodExeption, "Found Empty Mood Exception");
             }
+
 
 
         }

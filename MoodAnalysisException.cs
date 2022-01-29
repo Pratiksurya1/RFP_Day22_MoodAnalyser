@@ -10,7 +10,8 @@ namespace Day22_MoodAnalyser
     {
         public enum AnalysisErrors
         {
-            NullMoodExeption
+            NullMoodExeption,
+            NoSuchClassException
         }
 
         AnalysisErrors type;
