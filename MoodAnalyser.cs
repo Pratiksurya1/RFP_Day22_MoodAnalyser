@@ -9,13 +9,21 @@ namespace Day22_MoodAnalyser
     internal class MoodAnalyser
     {
         public String AnalyzedMood(String message)
-        { 
-            if (message.ToLower().Contains("happy"))
+        {
+            try
+            {
+                if (message.ToLower().Contains("sad"))
+                    return "sad";
+
+
+                else
+                    return "happy";
+            }
+            catch (NullReferenceException)
+            {
                 return "happy";
-            else if (message.ToLower().Contains("sad"))
-                return "sad";
-            else
-                return "give valid message";
+            }
+            return message;
         }
     }
 }
