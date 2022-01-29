@@ -16,7 +16,7 @@ namespace Day22_MoodAnalyser
         }
         public MoodAnalyserFactory()
         {
-            message = null;
+            message = null; 
         }
         public MoodAnalyserFactory(String message)
         {

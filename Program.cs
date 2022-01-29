@@ -21,7 +21,7 @@ namespace Day22_MoodAnalyser
                 actual = moodAnalyser.AnalyzedMood();
                 Console.WriteLine(actual);
 
-                if (new MoodAnalyserFactory().Equals(moodAnalyser))
+                if (new MoodAnalyserFactory() .Equals(moodAnalyser))
                     Console.WriteLine("Test passes if they are equal");
                 else
 

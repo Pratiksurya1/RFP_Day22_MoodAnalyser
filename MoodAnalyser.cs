@@ -26,7 +26,7 @@ namespace Day22_MoodAnalyser
                 else
                     return "happy";
 
-                if (new MoodAnalyserFactory(message).Equals(message.ToLower()))
+                if (new MoodAnalyserFactory(message).Equals(message.ToLower())) 
                     return "equals";
                 else
                 {
